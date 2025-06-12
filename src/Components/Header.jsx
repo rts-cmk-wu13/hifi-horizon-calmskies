@@ -1,6 +1,7 @@
 import { useLocation } from "react-router"
-import LogoutButton from './LogoutButton'
+
 import Navigation from './Navigation'
+import Login from "../pages/Login";
 
 export default function Header() {
     const location = useLocation()
@@ -10,13 +11,13 @@ export default function Header() {
 
     return (
         <header>
-            <h1>My App</h1>
-            {location.pathname !== "/login" && (
+        
                 <>
                     < Navigation />
-                    <LogoutButton />
+                   
+                    {/* <LogoutButton /> */}
                 </>
-            )}
+        
         </header>
     )
 }

@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router";
 import Layout from "./Layout";
+
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Detail from "./pages/Detail";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { getUser, getUsers } from "./api/typicode";
@@ -11,6 +13,7 @@ import Error from "./Components/Error";
 import { handleSubmit } from "./api/actions";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
+
 
 
 const router = createBrowserRouter([
@@ -26,21 +29,18 @@ const router = createBrowserRouter([
             },
             {
                 path: "list",
-                element: (
-                    <RequireAuth>
-                        <List />
-                    </RequireAuth>
-                ),
-                loader: getUsers // This will fetch users data when the Home component is loaded
+                element: <List />,
+                //  loader: getUsers // This will fetch users data when the Home component is loaded
             },
             {
                 path: "list/:id",
-                element: (
-                    <RequireAuth>
-                        <Detail />
-                    </RequireAuth>
-                ),
-                loader: getUser
+                element: <Detail />,
+                // loader: getUser
+            },
+            {
+                path: "about",
+                element: <About />,
+
             },
             {
                 path: "contact",

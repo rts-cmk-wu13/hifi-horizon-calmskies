@@ -12,7 +12,7 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <small>© 2023 My App</small>
+
       </footer>
     </>
   )
