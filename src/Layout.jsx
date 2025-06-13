@@ -1,7 +1,7 @@
 
 import { Outlet } from 'react-router'
 import Header from './Components/Header'
-
+import Footer from './Components/Footer';
 function App() {
 
 
@@ -11,9 +11,9 @@ function App() {
       <main>
         <Outlet />
       </main>
-      <footer>
-
-      </footer>
+      
+      <Footer/>
+      
     </>
   )
 }
