@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
-
+import { FaCcStripe, FaCcVisa, FaCcMastercard } from 'react-icons/fa';
 /**
  * Footer.jsx
  * Denne komponent viser en footer med flere kolonner, kontaktinfo,
@@ -76,17 +76,18 @@ import { FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-i
       <hr className="  outline-neutral-300 " />
 
       {/* Bundtekst med betalingskort som er et IKON og firmanavn */}
-      <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+      <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white">
         <div className="flex items-center space-x-4 mb-4 md:mb-0">
-          <img src="/assets/stripe.svg" alt="Stripe" className="h-6" />
-          <img src="/assets/visa.svg" alt="Visa" className="h-6" />
-          <img src="/assets/mastercard.svg" alt="Mastercard" className="h-6" />
+          {/* <a href="#">Stripe<FaCcStripe /> </a> */}
+         <FaCcStripe className="h-6 w-6" />
+          <FaCcVisa className="h-6 w-6" />
+          <FaCcMastercard className="h-6 w-6" />
         </div>
         <p>
           HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049298. Registered office: 2 Joppa Rd, Edinburgh EH15
           2EU
         </p>
-        <p className="mt-2 md:mt-0">Designed by WVU7</p>
+        <p className="mt-2 md:mt-0">Designed by WVU7 :)</p>
       </div>
     </footer>
   );
