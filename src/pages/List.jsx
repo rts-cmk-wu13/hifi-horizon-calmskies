@@ -2,15 +2,24 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useAuth } from "../contexts/AuthContext";
-import Card from "../Components/Card";
+
 
 export default function List() {
-    const users = useLoaderData();
+    const products = useLoaderData();
+
+
+    console.log(products);
 
 
     return (
 
-        // <h1>HER SKAL LISTEN VÆRE</h1>
-        <Card/>
+        <ul>
+            {products.map(product => (
+                <li key={product.id}>
+                    <Link to={`/list/${product.id}`}>{product.name}</Link>
+                </li>
+            ))}
+        </ul>
+
     )
 }
