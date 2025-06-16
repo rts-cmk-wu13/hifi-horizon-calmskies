@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router"
 import { useLoaderData } from "react-router";
+import Card from "../Components/Card"
 export default function Detail() {
 
-    const product = useLoaderData()
 
     return (
         <>
-            <p>user details</p>
-            <h2>{product.name}</h2>
+        <Card/>
         </>
 
     )
