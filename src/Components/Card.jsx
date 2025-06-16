@@ -9,7 +9,7 @@ export default function Card() {
             <img src={product.image} alt="product-image" />
             <p>{product.name}</p>
             <p>{product.price}</p>
-            <button className="bg-orange-600">Read more</button>
+            <button className="bg-orange-600 text-white">Read more</button>
         </div>
     )
 }
