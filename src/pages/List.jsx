@@ -5,12 +5,21 @@ import { useAuth } from "../contexts/AuthContext";
 
 
 export default function List() {
-    const users = useLoaderData();
+    const products = useLoaderData();
+
+
+    console.log(products);
 
 
     return (
 
-        <h1>HER SKAL LISTEN VÆRE</h1>
+        <ul>
+            {products.map(product => (
+                <li key={product.id}>
+                    <Link to={`/list/${product.id}`}>{product.name}</Link>
+                </li>
+            ))}
+        </ul>
 
     )
 }
