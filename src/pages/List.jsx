@@ -11,10 +11,12 @@ export default function List() {
 
     return (
         <>
+
         
         <ul className="container sm:mx-auto grid md:grid-cols-2 lg:grid-cols-3 text-center">   
         <SortBy/>
         </ul>
+
         </>
     )
 }
