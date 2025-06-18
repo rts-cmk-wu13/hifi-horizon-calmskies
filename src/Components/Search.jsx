@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router";
 
 
 export default function Search() {
@@ -46,7 +47,7 @@ export default function Search() {
                             key={item.id}
                             className="p-2 hover:bg-gray-100 cursor-pointer"
                         >
-                            {item.name}
+                            <Link to={`/list/${item.id}`}>{item.name}</Link>
                         </li>
                     ))}
                 </ul>

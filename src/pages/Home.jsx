@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router"
 import PopularProducts from "../Components/PopularProducts"
+import NewsLetter from "../Components/NewsLetter"
 
 
 export default function Home() {
@@ -37,6 +38,9 @@ export default function Home() {
                 </div>
             </section>
 
+            <section>
+                <NewsLetter />
+            </section>
 
         </>
     )
