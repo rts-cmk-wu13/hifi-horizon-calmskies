@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import { getProduct, getProducts } from "./api/products";
 import Loading from "./Components/Loading";
 import Error from "./Components/Error";
-import { handleSubmit } from "./api/actions";
+import { contactAction } from "./routes/contactAction";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
 
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             {
                 path: "contact",
                 element: <Contact />,
-                action: handleSubmit
+                action: contactAction
             },
             {
                 path: "login",
