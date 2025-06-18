@@ -19,8 +19,8 @@ export default function Navigation() {
                 </ul>
                 <div className="justify-between items-center flex gap-4">
                     <Search className="rounded-sm "/>
-                    <ShoppingCart/>
                     <LoginButton/>
+                    <ShoppingCart/>
                 </div>
             </nav>
 
