@@ -1,3 +1,6 @@
+
+import { FaSearch } from 'react-icons/fa';
+
 import { useState, useEffect } from "react"
 import { Link } from "react-router";
 

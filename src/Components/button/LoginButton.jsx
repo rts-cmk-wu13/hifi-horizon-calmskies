@@ -1,7 +1,8 @@
 import { Link } from "react-router"
+import { AiOutlineUser } from "react-icons/ai";
 export default function LoginButton () {
 
 return (
-    <Link to="/login"><img src="src\assets\my_account.jpg"></img></Link>
+    <Link to="/login"><AiOutlineUser /></Link>
 )
 }

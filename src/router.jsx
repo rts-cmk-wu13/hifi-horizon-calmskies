@@ -13,6 +13,7 @@ import Error from "./Components/Error";
 import { contactAction } from "./routes/contactAction";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
+import { getHistory } from "./api/history";
 
 
 
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element: <About />,
-
+                loader: getHistory
             },
             {
                 path: "contact",
@@ -52,9 +53,13 @@ const router = createBrowserRouter([
                 element: <Login />
             },
             {
+                path: "about",
+                element: <About />
+            },
+            {
                 path: "*",
                 element: <NotFound />
-            }
+            },
         ]
     }
 
