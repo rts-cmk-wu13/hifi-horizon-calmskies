@@ -7,10 +7,10 @@ import Detail from "./pages/Detail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import { getUser, getUsers } from "./api/typicode";
+import { getProduct, getProducts } from "./api/products";
 import Loading from "./Components/Loading";
 import Error from "./Components/Error";
-import { handleSubmit } from "./api/actions";
+import { contactAction } from "./routes/contactAction";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
 import { getHistory } from "./api/history";
@@ -31,12 +31,12 @@ const router = createBrowserRouter([
             {
                 path: "list",
                 element: <List />,
-                //  loader: getUsers // This will fetch users data when the Home component is loaded
+                loader: getProducts // This will fetch users data when the Home component is loaded
             },
             {
                 path: "list/:id",
                 element: <Detail />,
-                // loader: getUser
+                loader: getProduct
             },
             {
                 path: "about",
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             {
                 path: "contact",
                 element: <Contact />,
-                action: handleSubmit
+                action: contactAction
             },
             {
                 path: "login",

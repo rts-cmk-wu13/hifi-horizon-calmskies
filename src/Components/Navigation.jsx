@@ -18,7 +18,9 @@ export default function Navigation() {
                     <li><HifiNavLink to="/contact">Contact</HifiNavLink></li>
                 </ul>
                 <div className="justify-between items-center flex gap-4">
+                 
                     <Search className="rounded-sm "/>
+                 
                     <LoginButton/>
                     <ShoppingCart/>
                 </div>

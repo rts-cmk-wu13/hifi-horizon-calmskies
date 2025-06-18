@@ -2,18 +2,21 @@
 import { Outlet } from 'react-router'
 import Header from './Components/Header'
 
-function App() {
+import Footer from './Components/Footer';
 
+
+function App() {
 
   return (
     <>
+
       <Header />
       <main>
         <Outlet />
       </main>
-      <footer>
-
-      </footer>
+      
+      <Footer/>
+      
     </>
   )
 }
