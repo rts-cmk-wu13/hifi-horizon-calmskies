@@ -9,7 +9,7 @@ export async function getProducts() {
     return queryClient.fetchQuery({
         queryKey: ['products'],
         queryFn: async function () {
-            const response = await fetch("http://localhost:4000/products");
+            const response = await fetch("https://hifi-api-uytm.onrender.com/products");
             if (!response.ok) {
                 throw new Error({ message: 'Den er helt gal' });
             }
@@ -25,7 +25,7 @@ export async function getProduct({ params }) {
     return queryClient.fetchQuery({
         queryKey: ['user', id],
         queryFn: async function () {
-            const response = await fetch(`http://localhost:4000/products/${id}`);
+            const response = await fetch(`https://hifi-api-uytm.onrender.com/products/${id}`);
             if (!response.ok) {
                 throw new Error({ message: 'Den er helt gal' });
             }
@@ -33,3 +33,6 @@ export async function getProduct({ params }) {
         }
     });
 }
+
+
+"http://localhost:4000"

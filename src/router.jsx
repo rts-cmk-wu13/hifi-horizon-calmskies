@@ -14,7 +14,7 @@ import { contactAction } from "./routes/contactAction";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
 import { getHistory } from "./api/history";
-
+import FAQ from "./pages/FAQ";
 
 
 const router = createBrowserRouter([
@@ -53,8 +53,8 @@ const router = createBrowserRouter([
                 element: <Login />
             },
             {
-                path: "about",
-                element: <About />
+                path: "faq",
+                element: <FAQ />
             },
             {
                 path: "*",

@@ -27,16 +27,16 @@ import { FaCcStripe, FaCcVisa, FaCcMastercard } from 'react-icons/fa';
 
         {/* Services &- er i tvivl om det virker og det er metoden.. Policies */}
         <div className="space-y-2">
-          <Link to="/returns" className="block font-normal hover:font-bold">
+          <Link to="/faq#returns" className="block font-normal hover:font-bold">
             Returns & Refunds
           </Link>
-          <Link to="/delivery" className="block font-normal hover:font-bold">
+          <Link to="/faq#delivery" className="block font-normal hover:font-bold">
             Delivery
           </Link>
-          <Link to="/privacy" className="block font-normal hover:font-bold">
+          <Link to="/faq#privacy" className="block font-normal hover:font-bold">
             Privacy Policy
           </Link>
-          <Link to="/terms" className="block font-normal hover:font-bold">
+          <Link to="/faq#terms" className="block font-normal hover:font-bold">
             Terms & Conditions
           </Link>
         </div>
