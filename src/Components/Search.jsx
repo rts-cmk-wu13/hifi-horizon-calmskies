@@ -49,6 +49,9 @@ export default function Search() {
                         <li
                             key={item.id}
                             className="p-2 hover:bg-gray-100 cursor-pointer"
+                            onClick={() => {
+                                setQuery("");
+                            }}
                         >
                             <Link to={`/list/${item.id}`}>{item.name}</Link>
                         </li>
