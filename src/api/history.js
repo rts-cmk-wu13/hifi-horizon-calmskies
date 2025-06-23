@@ -8,7 +8,7 @@ export async function getHistory() {
     return queryClient.fetchQuery({
         queryKey: ['users'],
         queryFn: async function () {
-            const response = await fetch("http://localhost:4000/history");
+            const response = await fetch("https://hifi-api-uytm.onrender.com/history");
             if (!response.ok) {
                 throw new Error({ message: 'Den er helt gal' });
             }
@@ -16,3 +16,5 @@ export async function getHistory() {
         }
     });
 }
+
+// "http://localhost:4000"
