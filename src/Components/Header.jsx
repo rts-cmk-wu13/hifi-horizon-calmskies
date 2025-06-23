@@ -11,13 +11,13 @@ export default function Header() {
 
     return (
         <header>
-        
-                <>
-                    < Navigation />
-                   
-                    {/* <LogoutButton /> */}
-                </>
-        
+
+            <>
+                < Navigation />
+
+                {/* <LogoutButton /> */}
+            </>
+
         </header>
     )
 }
