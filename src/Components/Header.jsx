@@ -6,7 +6,7 @@ import Login from "../pages/Login";
 export default function Header() {
     const location = useLocation()
 
-    console.log(location.pathname);
+    // console.log(location.pathname);
 
 
     return (

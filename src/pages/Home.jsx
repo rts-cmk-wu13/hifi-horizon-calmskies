@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <>
             <figure>
-                <img src="public/hifi-hero.png" alt="hifi hero image" />
+                <img className="w-full" src="public/hifi-hero.png" alt="hifi hero image" />
             </figure>
 
             <section className="container sm:mx-auto grid md:grid-cols-2 lg:grid-cols-4">
