@@ -8,8 +8,9 @@ export default function Home() {
 
     return (
         <>
-            <figure className="">
-                <img src="public/hifi-hero.png" className="w-full" alt="hifi hero image" />
+
+            <figure>
+                <img className="w-full" src="public/hifi-hero.png" alt="hifi hero image" />
             </figure>
 
 

@@ -32,6 +32,4 @@ export async function getProduct({ params }) {
     });
 }
 
-
-
 // "http://localhost:4000"

@@ -6,7 +6,7 @@ import { Link } from "react-router";
 
 
 export default function Search() {
-    const baseUrl = "http://localhost:4000"
+    const baseUrl = "https://hifi-api-uytm.onrender.com"
     const [products, setProducts] = useState([]);
     const [query, setQuery] = useState("");
 
