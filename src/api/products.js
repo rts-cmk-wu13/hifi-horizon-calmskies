@@ -4,8 +4,6 @@ import { redirect } from "react-router";
 
 export async function getProducts() {
 
-
-
     return queryClient.fetchQuery({
         queryKey: ['products'],
         queryFn: async function () {
@@ -35,4 +33,5 @@ export async function getProduct({ params }) {
 }
 
 
-"http://localhost:4000"
+
+// "http://localhost:4000"

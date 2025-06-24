@@ -38,19 +38,20 @@ export default function NewsLetter() {
 
 
     return (
-        <section>
-            <div>
-                <h2>SIGN UP FOR OUR NEWSLETTER</h2>
-                <p>Subscribing to our newsletter secures you up to date information about HiFi Horizons latest updates and offers.</p>
+        <section className="m-10">
+            <div className="m-5">
+                <h2 className="text-center m-2">SIGN UP FOR OUR NEWSLETTER</h2>
+                <p className="text-center">Subscribing to our newsletter secures you up to date information about HiFi Horizons latest updates and offers.</p>
             </div>
-            <div>
+            <div className="text-center m-2">
                 <input type="email"
+                    className="bg-gray-200 p-1"
                     placeholder="Enter your email..."
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
-                <button onClick={handleSignUp} className="bg-orange-600 text-white">
+                <button onClick={handleSignUp} className="bg-orange-600 text-white p-1 mx-5">
                     Sign up
                 </button>
                 {error && (
