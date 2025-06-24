@@ -5,10 +5,12 @@ export default function Card() {
         const [count, setCount] = useState(1);
         const product = useLoaderData()
         console.log(product);
+      
         function handleAdd() {
             setCount(count + 1);
 
         }
+        
         function handleSubtract() {
             if (count > 1) {
                 setCount(count - 1);

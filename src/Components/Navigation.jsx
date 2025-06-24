@@ -18,7 +18,7 @@ export default function Navigation() {
 
     return (
         <>
-            <nav className="NAVIGATION flex justify-between items-center py-2.5 px-5 bg-black text-white gap-4 relative">
+            <nav className="NAVIGATION flex justify-between items-center py-7 px-7 bg-black text-white gap-4 relative">
                 {/* Logo: hidden on mobile, visible on medium screens and up */}
                 <div className="flex items-center gap-2 hidden md:flex">
                     <HifiNavLink to="/">
@@ -43,7 +43,7 @@ export default function Navigation() {
                 </div>
 
                 {/* Desktop: icons (hidden on mobile) */}
-                <div className="hidden md:flex items-center gap-2 ml-auto">
+                <div className="hidden md:flex items-center gap-7 ml-auto">
                     <Search className="rounded-sm" />
                     <LoginButton />
                     <ShoppingCart />
@@ -58,7 +58,7 @@ export default function Navigation() {
 
                         {/* Logo at the top of the dropdown menu */}
                         <div className="flex flex-col items-center py-6">
-                            <img src="src/assets/logo_sml 1.png" alt="Logo" className="h-10 w-10" />
+                            <HifiNavLink to="/" onClick={() => setMenuOpen(false)}> <img src="src/assets/logo_sml 1.png" alt="Logo" className="h-10 w-10" /></HifiNavLink>
                         </div>
                         <ul className="flex flex-col items-center w-full">
                             <li className="py-2 w-full text-center">
