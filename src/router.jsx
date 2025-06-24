@@ -27,6 +27,8 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
+                loader: getProducts
+
             },
             {
                 path: "list",
