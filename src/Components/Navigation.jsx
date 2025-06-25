@@ -23,7 +23,7 @@ export default function Navigation() {
                 <div className="flex items-center gap-2 hidden md:flex">
                     <HifiNavLink to="/">
                         <i className="fa-solid fa-user"></i>
-                        <img src="assets/logo_sml 1.png" alt="Logo" className="h-10 w-10 mr-2" />
+                        <img src="scr/logo_sml 1.png" alt="Logo" className="h-10 w-10 mr-2" />
                     </HifiNavLink>
                 </div>
 
