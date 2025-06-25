@@ -10,7 +10,7 @@ export default function Home() {
         <>
 
             <figure>
-                <img className="w-full" src="public/hifi-hero.png" alt="hifi hero image" />
+                <img className="w-full" src="hifi-hero.png" alt="hifi hero image" />
             </figure>
 
 
