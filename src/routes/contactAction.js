@@ -1,3 +1,4 @@
+import { redirect } from "react-router";
 import { contactSchema } from "../schema/contactSchema";
 
 export async function contactAction({ request }) {
@@ -11,9 +12,19 @@ export async function contactAction({ request }) {
   };
 
   try {
-    contactSchema.parse(data);
-    // Her kan man sende e-mail eller gemme besked
+    let result = contactSchema.parse(data);
+    console.log("Validation result:", result);
+
+    fetch("https://hifi-api-uytm.onrender.com/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(result),
+    })
+
     return { success: true };
+
   } catch (err) {
     const formattedErrors = {};
     err.errors.forEach((error) => {
