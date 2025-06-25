@@ -1,9 +1,11 @@
-import { Form, useActionData } from "react-router";
+import { Form, useNavigate, useActionData } from "react-router";
 import { contactSchema } from "../schema/contactSchema";
 
 export default function Contact() {
+    const navigate = useNavigate();
   const errors = useActionData();
-
+console.log("Contact errors:", errors);
+if (errors?.success) navigate("/");
   return (
     <main className="bg-[#f4f4f2] py-10 px-4">
       <h1 className="text-[#495464] text-4xl md:text-5xl font-normal uppercase mb-8">
