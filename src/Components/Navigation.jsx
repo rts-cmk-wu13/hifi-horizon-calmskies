@@ -1,4 +1,4 @@
-import { NavLink } from "react-router"
+timport { NavLink } from "react-router"
 import './navigation.scss'
 import HifiNavLink from "./HifiNavLink"
 import Login from "../pages/Login"
