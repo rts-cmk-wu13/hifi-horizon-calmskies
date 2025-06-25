@@ -8,62 +8,69 @@ export default function SortBy() {
     const [productCat, setProductCat] = useState([])
     const [isChecked, setIsChecked] = useState([])
     const [selectedProduct, setSelectedProduct] = useState([])
+    const [selectedinput, setSelectedinput] = useState([]); // Indeholder de valgte input-elementer
 
-    const [isChecked2, setIsChecked2] = useState(false);
-    
-    
-
-    useEffect(() => {
-
-        // console.log(isChecked);
-        if (isChecked) {
-            const data = products.filter(item => item.category.includes(`${productCat}`))
-            setProductCategory(data)
-        } else {
-            setProductCategory(products)
-            // console.log("C R A C K E R S");
-
-        }
-    }, [productCat, isChecked])
-
-    useEffect(()=>{
+// Når data hentes første gang
+  useEffect(() => {
+    if (products) {
+        // console.log(products);
         
-        // console.log(selectedProduct);
-        
-    },[selectedProduct])
-
-
-   
-
-    function actAmplifier(element) {
-
-        if(element.target.checked){
-
-            let sortList = selectedProduct.filter(prod => prod.id !== element.target.id)
-
-
-            console.log(sortList);
-
-            // console.log(element.target.id);
-                
-             setSelectedProduct(prevSelected => [...prevSelected, element.target])
-            //  setSelectedProduct(prevSelected => [...prevSelected, element.target])
-        }else{
-
-
-
-        }
-        //console.log(element.target.checked);
-        
-        // setSelectedProduct(element.target)
-       
-
-        setProductCat(element.target.value)
-        setIsChecked(element.target.checked);
-
-       
-
+      setProductCat(products);
     }
+  }, [products]);
+    let key = "category"
+    useEffect(() => {
+        
+        if (selectedinput.length > 0) {
+        console.log(selectedinput);
+
+      const filteredProducts = products.filter(product =>
+        selectedinput.some(inputId => product[key].toLowerCase() === inputId.toLowerCase())
+      );
+      setProductCat(filteredProducts);
+    } else {
+      setProductCat(products); // Hvis intet valgt, vis alle
+    }
+  }, [selectedinput]);
+    // useEffect(() => {
+
+    //     console.log(selectedinput);
+    //     console.log(productCat);    
+    //     if (isChecked) {
+    //         const data = products.filter(item => item.category.includes(`${productCat}`))
+    //         setProductCategory(data)
+    //     } else {
+    //         setProductCategory(products)
+    //         // console.log("C R A C K E R S");
+
+    //     }
+    // }, [productCat, isChecked, selectedinput])
+
+     const actAmplifier = (inputCheckBox) => {
+        const element = inputCheckBox.target;
+        const { checked, id } = element
+        checked ? setSelectedinput((prev) => [...prev, id]) : setSelectedinput((prev) => prev.filter((el) => el !== id))
+    };
+
+    // function actAmplifier(element) {
+
+    //      const elementTarget = element.target;
+
+    //     if (elementTarget.checked) {
+    //         // Tilføj til listen
+    //         setSelectedinput((prev) => [...prev, elementTarget]);
+    //         // console.log(productCat);
+    //         // setProductCat((prev)=> [...prev, productCat])
+
+    //     } else {
+    //         // setProductCat((prev)=> [...prev, productCat])
+    //         // Fjern fra listen
+    //         setSelectedinput((prev) => prev.filter((el) => el !== elementTarget));
+    //     }
+       
+    //     setProductCat(element.target.value)
+    //     setIsChecked(element.target.checked);
+    // }
 
     
 
@@ -79,7 +86,6 @@ export default function SortBy() {
                             id="forforstaerker"
                             name="forforstaerker"
                             value="forforstaerker"
-                            
                             >
                         </input>
                     </label>
@@ -150,7 +156,7 @@ export default function SortBy() {
                     </label>
                 </section>
                 <ul className="container sm:mx-auto grid md:grid-cols-2 lg:grid-cols-3 text-center col-span-3 ">
-                    {productCategory && productCategory.map((product) => (
+                    {productCat && productCat.map((product) => (
 
                         // <p key={`${product.id}`}>{`${product.category}`}</p>
                         <li className="container flex place-content-center p-2" key={product.id}>

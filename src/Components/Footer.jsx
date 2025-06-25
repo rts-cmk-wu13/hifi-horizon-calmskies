@@ -17,7 +17,7 @@ import { FaCcStripe, FaCcVisa, FaCcMastercard } from 'react-icons/fa';
           <Link to="/" className=".text-whiteblock font-normal hover:font-bold">
             Home
           </Link>
-          <Link to="/shop" className="block font-normal hover:font-bold">
+          <Link to="/list" className="block font-normal hover:font-bold">
             Shop
           </Link>
           <Link to="/about" className="block font-normal hover:font-bold">
